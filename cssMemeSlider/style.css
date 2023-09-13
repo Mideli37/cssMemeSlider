@@ -43,7 +43,7 @@ main {
 .images-container {
   background-color: #d2debd;
   display: flex;
-  width: calc((100vw - 5rem) * 5);
+  width: 500%;
   transition: 300ms;
   transform: translateX(-0%);
 }
