@@ -137,3 +137,27 @@ main {
 .control-button:checked:hover {
   border-image: radial-gradient(#f5f5dc 35%, #88c76c 37%, #88c76c 50%, #f5f5dc 53%) 50%;
 }
+
+@media (width < 551px) {
+  .controlers-container {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .controlers {
+    align-self: center;
+    margin-bottom: 2rem;
+  }
+
+  .phrase {
+    text-align: center;
+  }
+
+  .text {
+    width: 90%;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+}
