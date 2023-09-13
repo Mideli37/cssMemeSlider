@@ -18,13 +18,13 @@ main {
 .images-restricter {
   width: 100%;
   overflow: hidden;
-  background-color: #FAF3D5;
+  background-color: #faf3d5;
   border-radius: 5px;
-  border: 2px solid #D2DEBD;
+  border: 2px solid #d2debd;
 }
 
 .image-wrapper {
-  background-color: #E0FAD5;
+  background-color: #e0fad5;
   width: 20%;
   padding: 1rem;
   max-height: 70vh;
@@ -41,7 +41,7 @@ main {
 }
 
 .images-container {
-  background-color: aqua;
+  background-color: #d2debd;
   display: flex;
   width: calc((100vw - 5rem) * 5);
   transition: 300ms;
@@ -97,12 +97,43 @@ main {
   align-items: center;
 }
 
-.controlers { 
-    align-self: flex-start;
+.controlers {
+  align-self: flex-start;
 }
 
-.controlers form{
+.controlers form {
   display: block;
   width: 8rem;
   margin-left: auto;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.control-button {
+  margin: 0;
+  accent-color: #d2debd;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  appearance: none;
+
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+
+  border: 0.8rem solid #b5c797;
+  border-image: radial-gradient(#b5c797 50%, transparent 53%) 50%;
+  transition: 0.2s all linear;
+}
+
+.control-button:hover {
+  border-image: radial-gradient(#88c76c 50%, transparent 53%) 50%;
+}
+
+.control-button:checked {
+  border-image: radial-gradient(#f5f5dc 35%, #b5c797 37%, #b5c797 50%, #f5f5dc 53%) 50%;
+}
+
+.control-button:checked:hover {
+  border-image: radial-gradient(#f5f5dc 35%, #88c76c 37%, #88c76c 50%, #f5f5dc 53%) 50%;
 }
