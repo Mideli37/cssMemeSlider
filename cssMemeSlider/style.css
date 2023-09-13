@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #f5f5dc;
+}
+
 main {
   display: flex;
   justify-content: center;
@@ -12,14 +16,15 @@ main {
 }
 
 .images-restricter {
-  width: calc(100vw - 4rem);
+  width: 100%;
   overflow: hidden;
-  background-color: grey;
-  border: 2px solid red;
+  background-color: #FAF3D5;
+  border-radius: 5px;
+  border: 2px solid #D2DEBD;
 }
 
 .image-wrapper {
-  background-color: aquamarine;
+  background-color: #E0FAD5;
   width: 20%;
   padding: 1rem;
   max-height: 70vh;
@@ -32,13 +37,13 @@ main {
   height: auto;
   max-width: 100%;
   max-height: 100%;
-  object-fit: scale-down;
+  object-fit: contain;
 }
 
 .images-container {
   background-color: aqua;
   display: flex;
-  width: calc((100vw - 4rem) * 5);
+  width: calc((100vw - 5rem) * 5);
   transition: 300ms;
   transform: translateX(-0%);
 }
@@ -70,6 +75,7 @@ main {
 
 .phrase {
   width: 20%;
+  margin: 0;
 }
 
 .phrase-wrapper {
@@ -91,6 +97,12 @@ main {
   align-items: center;
 }
 
-.controls {
-  margin-bottom: 1rem;
+.controlers { 
+    align-self: flex-start;
+}
+
+.controlers form{
+  display: block;
+  width: 8rem;
+  margin-left: auto;
 }
