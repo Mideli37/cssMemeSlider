@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5dc;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.images-restricter {
+  width: 100%;
+  overflow: hidden;
+  background-color: #faf3d5;
+  border-radius: 0.5rem;
+  border: 0.2rem solid #d2debd;
+}
+
+.image-wrapper {
+  background-color: #e0fad5;
+  width: 20%;
+  padding: 1rem;
+  max-height: 70vh;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.slider-image {
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.images-container {
+  background-color: #d2debd;
+  display: flex;
+  width: 500%;
+  transition: 300ms;
+  transform: translateX(-0%);
+}
+
+.main:has(.control-button:nth-child(1):checked) .images-container,
+.main:has(.control-button:nth-child(1):checked) .phrase-wrapper {
+  transform: translateX(-0%);
+}
+
+.main:has(.control-button:nth-child(2):checked) .images-container,
+.main:has(.control-button:nth-child(2):checked) .phrase-wrapper {
+  transform: translateX(-20%);
+}
+
+.main:has(.control-button:nth-child(3):checked) .images-container,
+.main:has(.control-button:nth-child(3):checked) .phrase-wrapper {
+  transform: translateX(-40%);
+}
+
+.main:has(.control-button:nth-child(4):checked) .images-container,
+.main:has(.control-button:nth-child(4):checked) .phrase-wrapper {
+  transform: translateX(-60%);
+}
+
+.main:has(.control-button:nth-child(5):checked) .images-container,
+.main:has(.control-button:nth-child(5):checked) .phrase-wrapper {
+  transform: translateX(-80%);
+}
+
+.phrase {
+  width: 20%;
+  margin: 0;
+}
+
+.phrase-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 500%;
+  transition: 300ms;
+}
+
+.text {
+  overflow: hidden;
+  width: 60%;
+}
+
+.controlers-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.controlers {
+  align-self: flex-start;
+}
+
+.controlers form {
+  display: block;
+  width: 8rem;
+  margin-left: auto;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.control-button {
+  margin: 0;
+  accent-color: #d2debd;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  appearance: none;
+
+  border-radius: 50%;
+
+  border: 0.8rem solid #b5c797;
+  border-image: radial-gradient(#b5c797 50%, transparent 53%) 50%;
+  transition: 0.2s all linear;
+}
+
+.control-button:hover {
+  border-image: radial-gradient(#88c76c 50%, transparent 53%) 50%;
+}
+
+.control-button:checked {
+  border-image: radial-gradient(#f5f5dc 35%, #b5c797 37%, #b5c797 50%, #f5f5dc 53%) 50%;
+}
+
+.control-button:checked:hover {
+  border-image: radial-gradient(#f5f5dc 35%, #88c76c 37%, #88c76c 50%, #f5f5dc 53%) 50%;
+}
+
+.control-button:checked:active {
+  border-image: radial-gradient(#f5f5dc 35%, #caf3b8 37%, #b4ec9c 50%, #f5f5dc 53%) 50%;
+}
+
+.control-button:active {
+  border-image: radial-gradient(#caf3b8 50%, transparent 53%) 50%;
+}
+
+@media (width < 551px) {
+  .controlers-container {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .controlers {
+    align-self: center;
+    margin-bottom: 2rem;
+  }
+
+  .phrase {
+    text-align: center;
+  }
+
+  .text {
+    width: 90%;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+}
