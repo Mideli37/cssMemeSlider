@@ -136,6 +136,14 @@ main {
   border-image: radial-gradient(#f5f5dc 35%, #88c76c 37%, #88c76c 50%, #f5f5dc 53%) 50%;
 }
 
+.control-button:checked:active {
+  border-image: radial-gradient(#f5f5dc 35%, #caf3b8 37%, #b4ec9c 50%, #f5f5dc 53%) 50%;
+}
+
+.control-button:active {
+  border-image: radial-gradient(#caf3b8 50%, transparent 53%) 50%;
+}
+
 @media (width < 551px) {
   .controlers-container {
     flex-direction: column-reverse;
